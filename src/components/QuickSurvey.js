@@ -8,6 +8,7 @@ const QuickSurvey = ({onBack}) => {
 
   return (
     <View>
+        <Button title="Volver" onPress={onBack}/>
       <Text>¿Te gusta React Native?</Text>
       <View>
         <Button title="Sí" onPress={() => setAnswer("Sí")} />
