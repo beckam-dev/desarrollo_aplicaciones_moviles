@@ -13,27 +13,27 @@ const TrafficLight = ({ onBack }) => {
         setColor("red");
         setMsj("¡Detente!");
         break;
-  
+
       case "amarillo":
         setColor("yellow");
-        setMsj("");
+        setMsj("¡Precaución!");
         break;
-  
+
       case "verde":
         setColor("green");
         setMsj("¡Avanza!");
         break;
     }
   };
-  
+
   return (
     <View>
       <Button title="Volver" onPress={onBack} />
       <View style={[styles.light, { backgroundColor: color }]}></View>
       <View>
-        <Button title="Rojo" onPress={() => changeColor("rojo")}/>
-        <Button title="Amarillo" onPress={() => changeColor("amarillo")}/>
-        <Button title="Verde" onPress={() => changeColor("verde")}/>
+        <Button title="Rojo" onPress={() => changeColor("rojo")} />
+        <Button title="Amarillo" onPress={() => changeColor("amarillo")} />
+        <Button title="Verde" onPress={() => changeColor("verde")} />
       </View>
       <Text>{msj}</Text>
     </View>
