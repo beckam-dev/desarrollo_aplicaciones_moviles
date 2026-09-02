@@ -7,7 +7,9 @@ import {
   Alert,
 } from "react-native";
 
-const DoubleNumber = () => {
+const DoubleNumber = ({
+    onBack
+}) => {
   const [number, setNumber] = useState("");
   const [result, setResult] = useState(null);
 
@@ -28,10 +30,13 @@ const DoubleNumber = () => {
       number: value,
       double: value * 2,
     });
+
+    setNumber("");
   };
 
   return (
     <View>
+      <Button title="Volver" onPress={onBack} />
       <TextInput
         placeholder="Escriba un número"
         value={number}
