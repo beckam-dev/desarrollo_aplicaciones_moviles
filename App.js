@@ -4,6 +4,8 @@ import { StyleSheet, Text, View } from "react-native";
 import DoubleNumber from "./src/components/DoubleNumber";
 import TrafficLight from "./src/components/TrafficLight";
 import UpperCaseConverter from "./src/components/UpperCaseConverter";
+import QuickSurvey from "./src/components/QuickSurvey";
+
 import { styles } from "./src/styles/styles.js";
 import { useState } from "react";
 import Home from "./src/pages/Home.js";
@@ -32,7 +34,7 @@ export default function App() {
     case "ejercicio4":
       return (
         <SafeAreaView style={styles.container}>
-          <DoubleNumber onBack={() => setPage("Home")} />
+          <QuickSurvey onBack={() => setPage("Home")} />
         </SafeAreaView>
       );
     default:
