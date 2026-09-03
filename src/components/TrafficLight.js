@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { styles } from "../styles/trafficLightCSS";
-import { View } from "react-native";
-import { Button } from "react-native";
-import { Text } from "react-native";
+import { styles } from "../styles/styles";
+import { trafficCss } from "../styles/trafficLightCSS";
+import { 
+  Button,
+  Text,
+  View
+} from "react-native";
 
 const TrafficLight = ({ onBack }) => {
   const [color, setColor] = useState("red");
@@ -29,7 +32,8 @@ const TrafficLight = ({ onBack }) => {
   return (
     <View>
       <Button title="Volver" onPress={onBack} />
-      <View style={[styles.light, { backgroundColor: color }]}></View>
+      <Text style={styles.title}>Semáforo interactivo</Text>
+      <View style={[trafficCss.light, { backgroundColor: color }]}></View>
       <View>
         <Button title="Rojo" onPress={() => changeColor("rojo")} />
         <Button title="Amarillo" onPress={() => changeColor("amarillo")} />

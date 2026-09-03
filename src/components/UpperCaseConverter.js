@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { Text } from "react-native";
-import { Button } from "react-native";
-import { TextInput } from "react-native";
-import { View } from "react-native";
+import { styles } from "../styles/styles";
+import { 
+  Text,
+  Button,
+  TextInput,
+  View 
+} from "react-native";
 
 const UpperCaseConverter = ({ onBack }) => {
   const [texto, setTexto] = useState("");
@@ -12,6 +15,7 @@ const UpperCaseConverter = ({ onBack }) => {
   return (
     <View>
       <Button title="Volver" onPress={() => onBack()} />
+      <Text style={styles.title}>Conversor de mayúsculas</Text>
       <TextInput
         placeholder="ingrese el texto"
         value={texto}

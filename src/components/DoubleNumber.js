@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { styles } from "../styles/styles";
 import {
   Button,
   Text,
@@ -37,6 +38,9 @@ const DoubleNumber = ({
   return (
     <View>
       <Button title="Volver" onPress={onBack} />
+
+      <Text style={styles.title}>Calculadora de doble</Text>
+
       <TextInput
         placeholder="Escriba un número"
         value={number}
